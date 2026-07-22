@@ -1,0 +1,121 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
+    font-weight: 800; /* ExtraBold */
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(17, 17, 27, 0.55);
+    color: #cdd6f4;
+}
+
+/* Blur relies on your compositor's blur being enabled (already on in hyprland.lua)
+   and waybar's layer being included in blur rules. */
+
+/* Shared "pill" look for every module group */
+#workspaces,
+#window,
+#clock,
+#network,
+#pulseaudio,
+#cpu,
+#memory,
+#battery,
+#tray {
+    background-color: rgba(30, 30, 46, 0.75);
+    border-radius: 12px;
+    margin: 4px 4px;
+    padding: 0 12px;
+}
+
+#workspaces {
+    padding: 0 6px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    margin: 0 ;
+    color: #6c7086;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+#workspaces button:hover {
+    background-color: rgba(166, 227, 161, 0.15);
+    color: #a6e3a1;
+}
+
+#workspaces button.active {
+    color: #11111b;
+    background-color: #a6e3a1;
+}
+
+#workspaces button.empty {
+    color: #45475a;
+}
+
+#window {
+    color: #bac2de;
+    font-weight: 500;
+}
+
+#clock {
+    color: #cdd6f4;
+    font-weight: 700;
+    background-color: rgba(49, 50, 68, 0.85); /* lighter than other pills */
+    border-radius: 999px; /* fully rounded / pill-circle look */
+    padding: 4px 18px;
+    margin: 6px 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+#network,
+#pulseaudio,
+#cpu,
+#memory,
+#battery {
+    color: #a6e3a1; /* mocha green accent */
+}
+
+#tray {
+    padding: 0 10px;
+}
+
+#battery.charging {
+    color: #94e2d5;
+}
+
+#battery.warning:not(.charging) {
+    color: #f9e2af;
+}
+
+#battery.critical:not(.charging) {
+    color: #f38ba8;
+    background-color: rgba(243, 139, 168, 0.15);
+}
+
+#pulseaudio.muted {
+    color: #6c7086;
+}
+
+tooltip {
+    background-color: #11111b;
+    color: #cdd6f4;
+    border-radius: 8px;
+    border: 1px solid rgba(166, 227, 161, 0.3);
+
+}
+
+#language {
+    background: rgba(17, 17, 27, 0.9);
+    color: #cdd6f4;
+    padding: 0 6px;
+    margin: 5px 4px 5px 8px;
+    border-radius: 10px;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: 800;
+    font-size: 12px;
+    min-width: 0;
+}

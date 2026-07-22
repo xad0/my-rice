@@ -1,0 +1,73 @@
+* {
+    bg: rgba(30,30,46,92%);
+    surface: rgba(49,50,68,85%);
+    text: #cdd6f4;
+    green: #a6e3a1;
+    mauve: #cba6f7;
+
+    background-color: @bg;
+    text-color: @text;
+}
+
+window {
+    width: 500px;
+    border: 2px;
+    border-color: @green;
+    border-radius: 18px;
+    padding: 15px;
+    background-color: @bg;
+}
+
+mainbox {
+    children: [ inputbar, listview ];
+    spacing: 15px;
+}
+
+inputbar {
+    background-color: @surface;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+prompt {
+    text-color: @green;
+}
+
+entry {
+    text-color: @text;
+}
+
+listview {
+    spacing: 6px;
+}
+
+element {
+    padding: 10px;
+    border-radius: 12px;
+    background-color: transparent;
+    text-color: @text;
+}
+
+element normal {
+    background-color: transparent;
+    text-color: @text;
+}
+
+element alternate {
+    background-color: transparent;
+    text-color: @text;
+}
+
+element selected {
+    background-color: @green;
+    text-color: #11111b;
+    border-radius: 12px;
+}
+
+element-icon {
+    size: 32px;
+}
+
+element-text {
+    text-color: @text;
+}

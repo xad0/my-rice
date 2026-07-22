@@ -1,0 +1,11 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    font: "JetBrainsMono Nerd Font 14";
+}
+
+listview {
+    lines: 15;
+}
+
+@theme "mocha-clean"
