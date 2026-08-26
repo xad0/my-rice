@@ -1,3 +1,4 @@
+
 * {
     bg: #1e1e2e;
     surface: #313244;
@@ -11,13 +12,13 @@
 
 window {
     width: 520px;
-    padding: 18px;
+    padding: 2px;
 
     background-color: #1e1e2e;
 
-    border: 2px;
+    border: 1px;
     border-color: #a6e3a1;
-    border-radius: 18px;
+    border-radius: 16px;
 }
 
 mainbox {
@@ -30,10 +31,10 @@ mainbox {
 }
 
 inputbar {
-    padding: 10px 14px;
+    padding: 5px 5px;
 
     background-color: #313244;
-    border-radius: 12px;
+    border-radius: 4px;
 
     children: [
         prompt,
@@ -51,11 +52,12 @@ entry {
 
 listview {
     spacing: 6px;
+    lines: 6;
 }
 
 element {
-    padding: 8px 12px;
-    border-radius: 12px;
+    padding: 2px 2px;
+    border-radius: 2px;
 
     background-color: transparent;
 
@@ -81,7 +83,7 @@ element alternate {
 
 element selected {
     background-color: #a6e3a1;
-    border-radius: 12px;
+    border-radius: 4px;
 }
 
 element-icon {

@@ -5,7 +5,7 @@ configuration {
 }
 
 listview {
-    lines: 15;
+    lines: 6;
 }
 
 @theme "mocha-clean"

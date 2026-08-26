@@ -11,11 +11,10 @@
 
 window {
     width: 500px;
-    border: 2px;
+    padding: 10px;
+    border: 1px;
     border-color: @green;
     border-radius: 18px;
-    padding: 15px;
-    background-color: @bg;
 }
 
 mainbox {
@@ -39,10 +38,11 @@ entry {
 
 listview {
     spacing: 6px;
+    lines: 6;
 }
 
 element {
-    padding: 10px;
+    padding: 5px;
     border-radius: 12px;
     background-color: transparent;
     text-color: @text;
@@ -58,7 +58,8 @@ element alternate {
     text-color: @text;
 }
 
-element selected {
+element selected.normal {
+    border: 0;
     background-color: @green;
     text-color: #11111b;
     border-radius: 12px;

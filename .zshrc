@@ -12,9 +12,12 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-alias hyprconf="nano ~/.config/hypr/hyprland.lua"
+alias hyprconf="nvim ~/.config/hypr/hyprland.lua"
 alias hyprreload="hyprctl reload"
-alias zshconf="nano ~/.zshrc"
+alias zshconf="nvim ~/.zshrc"
 alias zshreload="source ~/.zshrc"
-alias grep="rg"
-alias ls="eza"
+alias ls='eza -la --long --group --icons'
+
+export PATH=$PATH:/home/adomas/.spicetify
+alias dockup='sudo systemctl start containerd docker.socket docker.service'
+alias dockdown='sudo systemctl stop docker.service docker.socket containerd'
