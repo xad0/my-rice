@@ -5,19 +5,33 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=100
+SAVEHIST=1000
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/home/adomas/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-alias hyprconf="nvim ~/.config/hypr/hyprland.lua"
-alias hyprreload="hyprctl reload"
-alias zshconf="nvim ~/.zshrc"
-alias zshreload="source ~/.zshrc"
-alias ls='eza -la --long --group --icons'
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+export PATH="$HOME/.local/bin:$PATH"
 
 export PATH=$PATH:/home/adomas/.spicetify
-alias dockup='sudo systemctl start containerd docker.socket docker.service'
-alias dockdown='sudo systemctl stop docker.service docker.socket containerd'
+
+# opencode
+export PATH=/home/adomas/.opencode/bin:$PATH
+alias ls='eza --group-directories-first'
+alias ll='eza -lh --group-directories-first'
+alias la='eza -a --group-directories-first'
+alias lla='eza -lah --group-directories-first'
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/adomas/.local/bin:$PATH"

@@ -4,13 +4,12 @@
     "height": 26,
     "spacing": 4,
 
-    "modules-left": ["hyprland/language",  "hyprland/workspaces", "hyprland/window"],
+    "modules-left": ["hyprland/language",  "hyprland/workspaces", "custom/rmpc"],
     "modules-center": ["clock"],
     "modules-right": ["network", "pulseaudio", "cpu", "memory", "battery", "tray"],
 
     "hyprland/workspaces": {
     "format": "{id}",
-    "on-click": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"{id}\" })'",
     "persistent-workspaces": {
         "*": 3
     }
@@ -24,11 +23,12 @@
      "tooltip": false
     },
 
-    "hyprland/window": {
-        "format": "{title}",
-
-        "max-length": 40,
-        "separate-outputs": true
+    "custom/rmpc": {
+        "exec": "~/.config/waybar/rmpc.sh",
+        "return-type": "json",
+        "interval": 1,
+        "hide-empty-text": true,
+        "on-click": "/home/adomas/.config/waybar/rmpc-popup-toggle.sh"
     },
 
     "clock": {
@@ -49,7 +49,9 @@
         "format-icons": {
             "default": ["󰕿", "󰖀", "󰕾"]
         },
-        "on-click": "pavucontrol"
+            "scroll-step": 5,
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-"
     },
 
     "cpu": {

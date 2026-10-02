@@ -27,7 +27,7 @@ window#waybar {
     border-radius: 12px;
     margin: 4px 4px;
     padding: 0 12px;
-}
+} 
 
 #workspaces {
     padding: 0 6px;
@@ -79,9 +79,6 @@ window#waybar {
     color: #a6e3a1; /* mocha green accent */
 }
 
-#tray {
-    padding: 0 10px;
-}
 
 #battery.charging {
     color: #94e2d5;
@@ -119,3 +116,23 @@ tooltip {
     font-size: 12px;
     min-width: 0;
 }
+
+/* rmpc / MPD */
+#mpd {
+    color: #cdd6f4;
+    padding: 0 10px;
+    margin: 0 3px;
+}
+
+#mpd:hover {
+    color: #cdd6f4;
+}
+
+#mpd.stopped {
+    color: #6c7086;
+}
+
+#mpd.paused {
+    color: #a6e3a1;
+}
+
